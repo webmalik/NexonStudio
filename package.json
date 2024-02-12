@@ -56,5 +56,9 @@
 		"webpack": "latest",
 		"webpack-stream": "latest",
 		"yargs": "latest"
+	},
+	"dependencies": {
+		"@studio-freight/lenis": "^1.0.34",
+		"lenis": "^0.0.2"
 	}
 }

@@ -1,5 +1,7 @@
 import $ from "jquery";
 
+import Lenis from "@studio-freight/lenis";
+
 export function burgerMenu() {
   const burger = document.querySelector(".header__menu-button");
   const close = document.querySelector(".menu__close");
@@ -285,4 +287,15 @@ export function inputPassword() {
       });
     });
   }
+}
+
+export function smoothScroll() {
+  const lenis = new Lenis();
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
 }

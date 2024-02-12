@@ -3,11 +3,11 @@
   "menuItems": [
     {
       "label": "Стартова сторінка",
-      "url": "/"
+      "url": "/NexonStudio"
     },
     {
-      "label": "Home",
-      "url": "/main.html"
+      "label": "Головна сторінка",
+      "url": "/NexonStudio/main.html"
     }
   ]
 }
