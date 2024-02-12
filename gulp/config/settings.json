@@ -1,0 +1,13 @@
+{
+  "projectName": "Новий проект",
+  "menuItems": [
+    {
+      "label": "Стартова сторінка",
+      "url": "/"
+    },
+    {
+      "label": "Home",
+      "url": "/main.html"
+    }
+  ]
+}
