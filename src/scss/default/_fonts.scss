@@ -15,15 +15,8 @@
 @font-face {
 	font-family: 'Gilroy';
 	font-display: swap;
-	src: url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.woff2") format("woff2");
-	font-weight: Light;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Gilroy';
-	font-display: swap;
-	src: url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.woff2") format("woff2");
-	font-weight: Light;
+	src: url("../fonts/Gilroy-ExtraBold.woff") format("woff"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2");
+	font-weight: ExtraBold;
 	font-style: normal;
 }
 @font-face {
@@ -31,6 +24,13 @@
 	font-display: swap;
 	src: url("../fonts/Gilroy-ExtraBold.woff") format("woff"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2");
 	font-weight: ExtraBold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy';
+	font-display: swap;
+	src: url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.woff2") format("woff2");
+	font-weight: Light;
 	font-style: normal;
 }
 @font-face {
@@ -43,8 +43,15 @@
 @font-face {
 	font-family: 'Gilroy';
 	font-display: swap;
-	src: url("../fonts/Gilroy-ExtraBold.woff") format("woff"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2");
-	font-weight: ExtraBold;
+	src: url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.woff2") format("woff2");
+	font-weight: Light;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy';
+	font-display: swap;
+	src: url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.woff2") format("woff2");
+	font-weight: Medium;
 	font-style: normal;
 }
 @font-face {
@@ -59,13 +66,6 @@
 	font-display: swap;
 	src: url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.woff2") format("woff2");
 	font-weight: Regular;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Gilroy';
-	font-display: swap;
-	src: url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.woff2") format("woff2");
-	font-weight: Medium;
 	font-style: normal;
 }
 @font-face {

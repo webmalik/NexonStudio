@@ -260,15 +260,8 @@ meter {
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.woff2") format("woff2");
-  font-weight: Light;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.woff2") format("woff2");
-  font-weight: Light;
+  src: url("../fonts/Gilroy-ExtraBold.woff") format("woff"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2");
+  font-weight: ExtraBold;
   font-style: normal;
 }
 @font-face {
@@ -276,6 +269,13 @@ meter {
   font-display: swap;
   src: url("../fonts/Gilroy-ExtraBold.woff") format("woff"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2");
   font-weight: ExtraBold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.woff2") format("woff2");
+  font-weight: Light;
   font-style: normal;
 }
 @font-face {
@@ -288,8 +288,15 @@ meter {
 @font-face {
   font-family: "Gilroy";
   font-display: swap;
-  src: url("../fonts/Gilroy-ExtraBold.woff") format("woff"), url("../fonts/Gilroy-ExtraBold.woff2") format("woff2");
-  font-weight: ExtraBold;
+  src: url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.woff2") format("woff2");
+  font-weight: Light;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: Medium;
   font-style: normal;
 }
 @font-face {
@@ -304,13 +311,6 @@ meter {
   font-display: swap;
   src: url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.woff2") format("woff2");
   font-weight: Regular;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Gilroy";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.woff2") format("woff2");
-  font-weight: Medium;
   font-style: normal;
 }
 @font-face {
@@ -354,12 +354,21 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  transition: all 0.5s ease-in-out;
+  transition-property: max-height, transform, overflow;
+  transition-duration: 0s, 0.5s, 0s;
+  transition-delay: 0.5s, 0s, 0s;
+  transition-timing-function: ease-in-out;
+  max-height: 10000dvh;
 }
 .wrapper.active {
-  transition: all 0.5s ease-in-out;
+  transition-property: max-height, transform, overflow;
+  transition-duration: 0s, 0.5s, 0s;
+  transition-delay: 0s, 0s, 0s;
+  transition-timing-function: ease-in-out;
   transform: perspective(1000px) rotateY(-25deg) scale(0.55) translateY(-50px) translateX(200px);
   cursor: pointer;
+  max-height: 100dvh;
+  overflow: hidden;
 }
 
 .main {
@@ -1122,6 +1131,12 @@ html.lenis {
 }
 .header__lang a {
   color: #ffffff;
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+.header__lang a:hover, .header__lang a.active {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
 }
 .header__button {
   color: #ffffff;
@@ -1391,4 +1406,131 @@ html.lenis {
   letter-spacing: -2%;
   text-align: left;
   text-decoration-line: underline;
+}
+
+.portfolio {
+  background: rgb(21, 21, 21);
+  padding: 150px 0 96px;
+}
+.portfolio__header {
+  color: rgb(255, 255, 255);
+  font-family: "Gilroy";
+  font-size: 8rem;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -2%;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.portfolio__title {
+  color: rgb(255, 255, 255);
+  font-family: "Gilroy";
+  font-size: 5.5rem;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -2%;
+  text-align: left;
+  position: absolute;
+  bottom: -6rem;
+  left: 55px;
+  transition: all 0.5s ease-in-out;
+}
+.portfolio__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.portfolio__item {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 0.13rem solid rgb(67, 67, 67);
+  border-radius: 2.29rem;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.portfolio__item picture,
+.portfolio__item img {
+  width: auto;
+  height: 100%;
+}
+.portfolio__item:hover {
+  border: 0.13rem solid rgb(255, 255, 255);
+}
+.portfolio__item:hover .portfolio__title {
+  bottom: 80px;
+}
+.portfolio__item:hover .portfolio__label {
+  border-radius: 0rem 0rem 1.15rem 1.15rem;
+  background: rgb(255, 255, 255);
+  padding: 5.16rem 1.72rem 1.15rem;
+  color: rgb(21, 21, 21);
+  font-family: "Gilroy";
+  font-size: 1.83rem;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-align: left;
+}
+.portfolio__item:hover .portfolio__label svg path {
+  fill: rgb(21, 21, 21);
+  transition: all 0.5s ease-in-out;
+}
+.portfolio__item:hover .portfolio__tags {
+  right: 55px;
+}
+.portfolio__label {
+  position: absolute;
+  box-sizing: border-box;
+  border-top: 0.125rem solid rgb(67, 67, 67);
+  border-radius: 0rem 0rem 1.15rem 1.15rem;
+  backdrop-filter: blur(2.29rem);
+  background: rgba(21, 21, 21, 0.3);
+  top: 0;
+  left: 55px;
+  padding: 5.16rem 1.72rem 1.15rem;
+  transition: all 0.5s ease-in-out;
+  color: rgb(255, 255, 255);
+  font-family: "Gilroy";
+  font-size: 1.83rem;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-align: left;
+  max-width: 12.67rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.portfolio__label svg {
+  min-width: 1.15rem;
+  min-height: 1.15rem;
+}
+.portfolio__label svg path {
+  transition: all 0.5s ease-in-out;
+}
+.portfolio__tags {
+  position: absolute;
+  right: -200px;
+  top: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.portfolio__tag {
+  border-radius: 7.59rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  color: rgb(255, 255, 255);
+  font-family: "Gilroy";
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.38rem;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
 }
